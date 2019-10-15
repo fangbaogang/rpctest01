@@ -1,12 +1,10 @@
 package main
 
 import (
-	"crypto/rand"
 	"fmt"
 	"log"
 	"rpctest01/client"
 	"rpctest01/server"
-	"strconv"
 	"sync"
 	"time"
 )
@@ -21,7 +19,7 @@ func main() {
 	for i := 0; i < callTimes; i++ {
 		go func() {
 			//使用hello world加一个随机数作为参数
-			argString := "hello world " + strconv.Itoa(rand.Int(), nil)
+			argString := "hello world " + "fangbaogang"
 			resultString, err := client.Echo(argString)
 			if err != nil {
 				log.Fatal("error calling:", err)
